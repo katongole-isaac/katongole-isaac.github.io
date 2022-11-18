@@ -93,6 +93,7 @@ ul {
 .moreInfo {
   display: flex;
   height: 350px;
+  display: none;
 }
 
 .moreInfo .moreInfoFirst {
