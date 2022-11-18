@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,400&display=swap");
+
+/* google-icons check */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+.list-div {
+  display: flex;
+}
+
+.outerContainer {
+  /* background-color: #fafafa; */
+  height: 100vh;
+}
+.headerBackground {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px;
+  height: 40px;
+  align-items: center;
+}
+.header h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .navList {
+  flex-basis: 480px;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .navList ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  margin-right: 2px;
+}
+.header .navList ul li {
+  margin: 0 5px;
+}
+
+.main {
+  display: flex;
+}
+.main .profileImage {
+  margin: 5px;
+}
+.main .profileText {
+  margin: 5px;
+}
+.article {
+  width: 100%;
+  height: 150px;
+  min-height: 150px;
+  margin: 5px;
+}
+
+.article .articleContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  margin: 3px;
+}
+.article .articleContent > p {
+  text-align: center;
+}
+
+.moreInfo {
+  display: flex;
+  height: 350px;
+}
+
+.moreInfo .moreInfoFirst {
+  padding: 10px;
+  /* margin: 5px; */
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 0 0 0 10px #fafafa;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  padding: 5px;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 680px) {
+  .outerContainer {
+    height: auto;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .main .profileImage {
+    display: flex;
+    justify-content: center;
+  }
+  .main .profileText {
+    padding: 5px;
+  }
+  .moreInfo {
+    height: auto;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+  .article .articleContent {
+    width: 100%;
+    height: auto;
+
+    padding: 5px;
+  }
+  .article .articleContent > p {
+    text-align: justify;
+    padding: 5px;
+  }
+  .article {
+    height: auto;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header .navList {
+    display: none;
+  }
+}
+
+.skills ul {
+  display: flex;
+}
+.skills .skill-div {
+  margin: 5px;
+}
+
+/*  */
+.navList ul > li:hover {
+  cursor: pointer;
+}
+.contentDetails {
+  /* align-self: center; */
+}
