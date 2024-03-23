@@ -1,6 +1,5 @@
-import React from "react";
-
 import MakerereLogo from "../assets/images/makerere_logo.jpeg";
+import ImageIcon from "./common/imageIcon";
 
 export default function Education() {
   return (
@@ -11,9 +10,7 @@ export default function Education() {
 
       <div>
         <div className="flex gap-2">
-          <div className="w-14">
-            <img src={MakerereLogo} alt="Makerere_Univerity_log" />
-          </div>
+          <ImageIcon src={MakerereLogo} alt="Makerere_Univerity_log" />
           <div className="flex-1">
             <p className="font-normal">Makerere University</p>
             <p className="text-sm text-gray-600">
