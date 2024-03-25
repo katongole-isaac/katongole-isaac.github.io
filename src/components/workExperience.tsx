@@ -1,5 +1,6 @@
 import React from "react";
 import Experience from "./experience";
+import workExperienceData from "../data/workExperienceData";
 
 export default function WorkExperience() {
   return (
@@ -8,11 +9,9 @@ export default function WorkExperience() {
         <p className="font-semibold text-xl">Experience</p>
       </div>
       <div className=" space-y-3">
-        {Array(3)
-          .fill(null)
-          .map((a, idx) => (
-            <Experience key={idx} />
-          ))}
+        {workExperienceData.map((exp, idx) => (
+          <Experience key={idx} {...exp} />
+        ))}
       </div>
     </div>
   );

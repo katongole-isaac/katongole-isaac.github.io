@@ -1,96 +1,90 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { MdOutlineDiamond } from "react-icons/md";
-import MakLogo from "../assets/images/makerere_logo.jpeg";
-import { SiUpwork } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaNodeJs } from "react-icons/fa6";
-import { SiTypescript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
 
-import ImageIcon from "./common/imageIcon";
+import SkillIcon from "./skillIcon";
 
-export default function Experience() {
+type DurationType = "Full time" | "Part time";
+
+interface Props {
+  companyIcon: React.ReactNode;
+  job: { title: string; type: "Remote" | "Freelance" | string };
+  company: { name: string; duration: DurationType; location: string };
+  duration: { startDate: string; endDate: string; totalTime: string };
+  description: React.ReactNode[] | (() => ReactNode)[];
+  skills: React.ReactNode[];
+}
+
+export interface IExperience extends Props {}
+
+export default function Experience({
+  job,
+  company,
+  duration,
+  description,
+  companyIcon,
+  skills,
+}: Props) {
   return (
     <div>
       <div className="flex gap-3">
         {/* company logo */}
-        <div>
-          <ImageIcon src={MakLogo} alt="Mak_logo" />
-        </div>
+        <div>{companyIcon}</div>
 
         {/* section - work description  */}
         <div className="">
           {/* title */}
           <div className="mb-1">
-            <p className="font-medium">Web Developer</p>
+            <p className="font-medium">{job.title}</p>
           </div>
 
           {/* company and duration */}
           <div className="flex  text-xs items-center gap-1 mb-1">
-            <span>Stratcom Inc</span>
+            <span>{company.name} </span>
             <Dot />
-            <span>Full time</span>
+            <span>{company.duration} </span>
           </div>
 
           {/* work time */}
 
           <div className="mb-1">
             <div className="text-xs text-gray-500 flex gap-1 items-center">
-              <span>Jun 2023</span>
+              <span>{duration.startDate} </span>
               <span>-</span>
-              <span>Aug 2023</span>
+              <span>{duration.endDate}</span>
               <Dot />
-              <span>3 months</span>
+              <span>{duration.totalTime}</span>
             </div>
           </div>
 
           {/* location */}
           <div>
             <div className="text-xs text-gray-500 flex gap-1 items-center">
-              <span>Boca Raton, Florida, United States</span>
+              <span>{company.location}</span>
               <Dot />
-              <span>Remote</span>
+              <span>{job.type}</span>
             </div>
           </div>
 
           {/* Description  */}
           <div className="text-sm text-zinc-800 my-4">
-            <p>
-              - Restructured, minified, and bundled Geojson data which enabled
-              seamless integration
-            </p>
-            <p>
-              - Data visualization - Populated radio stations and Geojson data
-              on a map-based UI using
-            </p>
-            <p>
-              - Keplergl. - Optimized supabase queries which lead to 5%
-              performance improvement
-            </p>
+            {description.map((desc, idx) => {
+              if (typeof desc === "function")
+                return <React.Fragment key={idx}>{desc()}</React.Fragment>;
+
+              return <React.Fragment key={idx}>{desc}</React.Fragment>;
+            })}
           </div>
 
           {/* Skill */}
 
           <div>
             <div className="flex gap-3 items-center">
-              <MdOutlineDiamond color="gray" />
-
+              <SkillIcon icon={MdOutlineDiamond} color="gray" />
               <div className="flex items-center gap-2">
-                <SiTypescript
-                  title="Typescript"
-                  className="text-blue-500 cursor-pointer bg-white"
-                />
-                <FaNodeJs
-                  title="Nodejs"
-                  className="bg-white text-green-700 cursor-pointer"
-                />
-                <FaReact
-                  title="ReactJS"
-                  className="text-cyan-500 cursor-pointer"
-                />
-                <IoLogoJavascript className="text-yellow-600 bg-white" />
+                {skills.map((skill, idx) => (
+                  <React.Fragment key={idx}>{skill}</React.Fragment>
+                ))}
               </div>
-              {/* <p className="text-sm font-medium">Nodejs, Reactjs and Nextjs</p> */}
             </div>
           </div>
         </div>
