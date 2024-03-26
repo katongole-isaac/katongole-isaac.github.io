@@ -1,7 +1,11 @@
+import Markdown from "markdown-to-jsx";
 import "./App.css";
 import Education from "./components/education";
 import ProfileOverview from "./components/profileOverview";
+import Projects from "./components/projects";
 import WorkExperience from "./components/workExperience";
+import { GithubRepoCard, TopLanguageCard } from "./data/githubCard";
+import { GITHUB_REPO, GITHUB_USERNAME } from "./data/mydata";
 
 function App() {
   return (
@@ -12,9 +16,21 @@ function App() {
             <div className="flex-1 boorder border-black">
               <ProfileOverview />
               <WorkExperience />
+              <WorkExperience />
+              <WorkExperience />
             </div>
-            <div className="basis-1/3 py-4 px-2 boorder border-red-700">
+            <div className="basis-1/3 py-4 px-2 space-y-2 boorder border-red-700">
+              <GithubRepoCard
+                githubUsername={GITHUB_USERNAME}
+                githubRepo={GITHUB_REPO}
+              />
+              <TopLanguageCard
+                githubUsername={GITHUB_USERNAME}
+                githubRepo={GITHUB_REPO}
+              />
               <Education />
+
+              <Projects />
             </div>
           </div>
         </div>

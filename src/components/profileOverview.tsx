@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { HiOutlineStatusOnline, HiBadgeCheck } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 import { SiUpwork } from "react-icons/si";
@@ -9,11 +9,10 @@ import moment from "moment-timezone";
 import Avatar from "./common/avatar";
 import SkillIcon from "./skillIcon";
 import formatCurrency from "../utils/formatCurrency";
+import { RATE_PER_HOUR } from "../data/mydata";
 
 export default function ProfileOverview() {
-  const dollarsPerHour = 5;
-
-  const currency = formatCurrency(dollarsPerHour);
+  const currency = formatCurrency(RATE_PER_HOUR);
 
   const getCurrentTimeInUganda = useCallback(
     () => moment().tz("Africa/Kampala").format("hh:mm A z Z "),

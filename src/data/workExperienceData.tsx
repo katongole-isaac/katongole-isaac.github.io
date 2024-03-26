@@ -1,7 +1,6 @@
 import ImageIcon from "../components/common/imageIcon";
 import { IExperience } from "../components/experience";
 import MakLogo from "../assets/images/makerere_logo.jpeg";
-import { SiUpwork } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaNodeJs } from "react-icons/fa6";
 import { SiTypescript } from "react-icons/si";
