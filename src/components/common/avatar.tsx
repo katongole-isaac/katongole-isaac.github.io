@@ -1,4 +1,3 @@
-import React from "react";
 
 import IsaacAvatar from "../../assets/images/isaac.png";
 

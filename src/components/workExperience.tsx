@@ -1,4 +1,3 @@
-import React from "react";
 import Experience from "./experience";
 import workExperienceData from "../data/workExperienceData";
 
