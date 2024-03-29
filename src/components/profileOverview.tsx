@@ -10,6 +10,7 @@ import Avatar from "./common/avatar";
 import SkillIcon from "./skillIcon";
 import formatCurrency from "../utils/formatCurrency";
 import { RATE_PER_HOUR } from "../data/mydata";
+import TextArt from "./common/textArt";
 
 export default function ProfileOverview() {
   const currency = formatCurrency(RATE_PER_HOUR);
@@ -28,12 +29,15 @@ export default function ProfileOverview() {
 
   return (
     <div className="relative max-h-[28rem] h-[28rem] flex flex-col boorder  border-pink-500">
-      <div className=" basis-48 border bg-gray-300"></div>
+      <div className=" basis-48 max-h-[12rem]">
+        <TextArt />
+      </div>
       <div className="absolute top-[5.5rem] mx-2 bg-zinc-100 rounded-full">
         <Avatar size="w-44" />
       </div>
-      <div className="flex-1 border  bg-slate-50">
-        <div className="h-20 border"></div>
+
+      <div className="flex-1 bg-slate-50">
+        <div className="h-20 "></div>
 
         {/* Profile details */}
         <div className="px-2">
