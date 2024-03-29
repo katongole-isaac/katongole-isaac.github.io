@@ -16,19 +16,17 @@ function App() {
             <div className="flex-1 boorder border-black">
               <ProfileOverview />
               <WorkExperience />
-              <WorkExperience />
-              <WorkExperience />
             </div>
             <div className="basis-1/3 py-4 px-2 space-y-2 boorder border-red-700">
               <GithubRepoCard
                 githubUsername={GITHUB_USERNAME}
                 githubRepo={GITHUB_REPO}
               />
+              <Education />
               <TopLanguageCard
                 githubUsername={GITHUB_USERNAME}
                 githubRepo={GITHUB_REPO}
               />
-              <Education />
 
               <Projects />
             </div>

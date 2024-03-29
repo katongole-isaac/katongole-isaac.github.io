@@ -7,7 +7,7 @@ type DurationType = "Full time" | "Part time";
 
 interface Props {
   companyIcon: React.ReactNode;
-  job: { title: string; type: "Remote" | "Freelance" | string };
+  job: { title: string; type: "Remote" | "Freelance" | "On-site" };
   company: { name: string; duration: DurationType; location: string };
   duration: { startDate: string; endDate: string; totalTime: string };
   description: React.ReactNode[] | (() => ReactNode)[];
@@ -80,7 +80,7 @@ export default function Experience({
           <div>
             <div className="flex gap-3 items-center">
               <SkillIcon icon={MdOutlineDiamond} color="gray" />
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 {skills.map((skill, idx) => (
                   <React.Fragment key={idx}>{skill}</React.Fragment>
                 ))}

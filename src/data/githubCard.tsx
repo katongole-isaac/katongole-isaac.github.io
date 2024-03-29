@@ -57,7 +57,7 @@ export const GithubRepoCard: React.FC<GithubRepoProps> = ({
         createElement(type, props, children) {
           return (
             <div className="w-full shadow">
-              {React.createElement(type, props, children)}
+              {React.createElement(type, { ...props }, children)}
             </div>
           );
         },
