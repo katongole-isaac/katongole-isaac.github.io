@@ -28,15 +28,15 @@ export default function ProfileOverview() {
   }, []);
 
   return (
-    <div className="relative max-h-[28rem] h-[28rem] flex flex-col boorder  border-pink-500">
+    <div className="relative max-h-[28rem] h-[28rem] flex flex-col ">
       <div className=" basis-48 max-h-[12rem]">
         <TextArt />
       </div>
-      <div className="absolute top-[5.5rem] mx-2 bg-zinc-100 rounded-full">
+      <div className="absolute top-[5.5rem] mx-2 bg-slate-50 rounded-full">
         <Avatar size="w-44" />
       </div>
 
-      <div className="flex-1 bg-slate-50">
+      <div className="flex-1 bg-white">
         <div className="h-20 "></div>
 
         {/* Profile details */}
@@ -47,7 +47,7 @@ export default function ProfileOverview() {
                 <h1 className="text-2xl font-medium">Katongole Isaac</h1>
                 <SkillIcon icon={HiBadgeCheck} color="#0d6efd" size="30px" />
               </div>
-              <p className="font-bold">{currency}/hr</p>
+              <p className="font-bold">{currency}/year</p>
             </div>
 
             <p>Frontend Developer - Reactjs | Nextjs | Typescript </p>

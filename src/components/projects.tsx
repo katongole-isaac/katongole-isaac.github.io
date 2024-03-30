@@ -51,7 +51,7 @@ const Project: React.FC<ProjectData> = ({
         <a href={projectURL} target="_blank">
           <h1 className="group hover:underline decoration-gray-500 hover:cursor-pointer font-medium flex items-center gap-2 hover:[]">
             <span className="text-gray-800"> {projectName} </span>
-            <FaExternalLinkAlt className=" text-gray-400 group-hover:text-blue-400" />
+            <FaExternalLinkAlt className=" text-gray-400 text-sm group-hover:text-blue-400" />
           </h1>
         </a>
 

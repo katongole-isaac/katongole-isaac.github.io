@@ -7,8 +7,15 @@ import { GithubRepoCard, TopLanguageCard } from "./data/githubCard";
 import { GITHUB_REPO, GITHUB_USERNAME } from "./data/mydata";
 import AboutMe from "./components/aboutMe";
 import Footer from "./components/footer";
+import FeedbackForm from "./components/feedbackForm";
+import FloatingButton from "./components/floatingButton";
+import { useState } from "react";
 
 function App() {
+  const [isContactFormOpen, setIsContentFormOpen] = useState(false);
+
+  // console.log("Env: ", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
   return (
     <>
       <div className="bg-[#fafafa] ">
@@ -35,6 +42,16 @@ function App() {
           </div>
         </div>
         <Footer />
+
+        {/* {isContactFormOpen && (
+          <div className="fixed bottom-20 right-2 md:right-5 ">
+            <FeedbackForm />
+          </div>
+        )}
+        <FloatingButton
+          isOpen={isContactFormOpen}
+          onClick={() => setIsContentFormOpen((prev) => !prev)}
+        /> */}
       </div>
     </>
   );
