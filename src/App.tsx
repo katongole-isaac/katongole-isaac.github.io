@@ -7,12 +7,12 @@ import { GithubRepoCard, TopLanguageCard } from "./data/githubCard";
 import { GITHUB_REPO, GITHUB_USERNAME } from "./data/mydata";
 import AboutMe from "./components/aboutMe";
 import Footer from "./components/footer";
-import FeedbackForm from "./components/feedbackForm";
-import FloatingButton from "./components/floatingButton";
-import { useState } from "react";
+// import FeedbackForm from "./components/feedbackForm";
+// import FloatingButton from "./components/floatingButton";
+// import { useState } from "react";
 
 function App() {
-  const [isContactFormOpen, setIsContentFormOpen] = useState(false);
+  // const [isContactFormOpen, setIsContentFormOpen] = useState(false);
 
   // console.log("Env: ", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 

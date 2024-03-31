@@ -3,7 +3,7 @@ import workExperienceData from "../data/workExperienceData";
 
 export default function WorkExperience() {
   return (
-    <div className="shadow-lg py-6 px-4 bg-white">
+    <div className="shadow-lg py-6 px-5 bg-white">
       <div className="my-2 mb-3">
         <p className="font-semibold text-xl">Experience</p>
       </div>

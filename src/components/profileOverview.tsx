@@ -40,14 +40,14 @@ export default function ProfileOverview() {
         <div className="h-20 "></div>
 
         {/* Profile details */}
-        <div className="px-2">
+        <div className="px-5">
           <div className="">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-medium">Katongole Isaac</h1>
                 <SkillIcon icon={HiBadgeCheck} color="#0d6efd" size="30px" />
               </div>
-              <p className="font-bold">{currency}/year</p>
+              {/* <p className="font-bold">{currency}/year</p> */}
             </div>
 
             <p>Frontend Developer - Reactjs | Nextjs | Typescript </p>

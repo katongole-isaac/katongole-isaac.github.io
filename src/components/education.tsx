@@ -3,7 +3,7 @@ import ImageIcon from "./common/imageIcon";
 
 export default function Education() {
   return (
-    <div className="shadow-md border py-4 px-3 bg-white">
+    <div className="shadow-md border py-4 px-5 bg-white">
       <div className="mb-2">
         <p className="font-semibold"> Education </p>
       </div>

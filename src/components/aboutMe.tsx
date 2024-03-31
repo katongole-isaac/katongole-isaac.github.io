@@ -1,7 +1,7 @@
 
 export default function AboutMe() {
   return (
-    <div className="px-3 py-4 shadow-md my-2 bg-white">
+    <div className="px-5 py-4 shadow-md my-2 bg-white">
       <div className="mb-2">
         <h1 className="font-bold text-xl">About Me</h1>
       </div>

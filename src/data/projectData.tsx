@@ -53,7 +53,7 @@ const ProjectImage: React.FC<{
 
 export const projectData: ProjectData[] = [
   {
-    projectName: "RAK ERP System Project",
+    projectName: "RAK ERP System",
     projectAlt: "RAK task management system.",
     projectURL: "https://rak-erp.com",
     projectImg: (
@@ -63,16 +63,7 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-slate-100 " }}
       />
     ),
-    skills: [
-      <ReactjsIcon />,
-      <TypescriptIcon />,
-      <GitIcon />,
-      <NodejsIcon />,
-      <ChakraIcon />,
-      <LinuxIcon />,
-      <HTMLIcon />,
-      <CssIcon />,
-    ],
+    skills: [<ReactjsIcon />, <TypescriptIcon />, <GitIcon />, <ChakraIcon />],
   },
   {
     projectName: "Dispney Clone",
@@ -88,11 +79,6 @@ export const projectData: ProjectData[] = [
     skills: [
       <GitIcon />,
       <ReactjsIcon />,
-      <HTMLIcon />,
-      <SassIcon />,
-      <BootStrapIcon />,
-      <ReduxIcon />,
-      <CssIcon />,
       <TypescriptIcon />,
       <NodejsIcon />,
       <TailwindIcon />,
@@ -113,8 +99,6 @@ export const projectData: ProjectData[] = [
     ),
     skills: [
       <ReactjsIcon />,
-      <HTMLIcon />,
-      <CssIcon />,
       <TypescriptIcon />,
       <NodejsIcon />,
       <GitIcon />,
@@ -132,19 +116,11 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-red-100" }}
       />
     ),
-    skills: [
-      <ReactjsIcon />,
-      <HTMLIcon />,
-      <CssIcon />,
-      <TypescriptIcon />,
-      <NodejsIcon />,
-      <GitIcon />,
-      <TailwindIcon />,
-    ],
+    skills: [<ReactjsIcon />, <JavascriptIcon />, <GitIcon />],
   },
 
   {
-    projectName: "Manage Landing Page",
+    projectName: "Manage Page",
     projectAlt: "This project was a challenge hosted on frontend mentor. ",
     projectURL: "https://katongole-isaac.github.io/manage-landing/",
     projectImg: (
@@ -154,18 +130,10 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-pink-100" }}
       />
     ),
-    skills: [
-      <ReactjsIcon />,
-      <JavascriptIcon />,
-      <NodejsIcon />,
-      <HTMLIcon />,
-      <GitIcon />,
-      <CssIcon />,
-      <SassIcon />,
-    ],
+    skills: [<ReactjsIcon />, <JavascriptIcon />, <GitIcon />, <SassIcon />],
   },
   {
-    projectName: "Easy Bank Landing Page",
+    projectName: "Easy Bank Page",
     projectURL: "https://katongole-isaac.github.io/easybank/",
     projectAlt:
       "Landing Page for easy Bank. A challenge hosted on fronten mentor",
@@ -180,14 +148,11 @@ export const projectData: ProjectData[] = [
       <ReactjsIcon />,
       <TypescriptIcon />,
       <GitIcon />,
-      <SassIcon />,
-      <NodejsIcon />,
-      <HTMLIcon />,
-      <CssIcon />,
+      <TailwindIcon />,
     ],
   },
   {
-    projectName: "Bookmark Landing Page",
+    projectName: "Bookmark Page",
     projectURL: "https://katongole-isaac.github.io/bookmark/",
     projectAlt: "Bookmark Landing page. A challenge hosted on fronten mentor",
     projectImg: (
@@ -197,14 +162,6 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-lime-100" }}
       />
     ),
-    skills: [
-      <ReactjsIcon />,
-      <TypescriptIcon />,
-      <GitIcon />,
-      <SassIcon />,
-      <NodejsIcon />,
-      <HTMLIcon />,
-      <CssIcon />,
-    ],
+    skills: [<ReactjsIcon />, <TypescriptIcon />],
   },
 ];

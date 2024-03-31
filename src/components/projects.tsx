@@ -16,7 +16,7 @@ export interface ProjectData {
 export default function Projects() {
   return (
     <div>
-      <div className="shadow-lg min-h-96 p-2 py-4 px-3 bg-white">
+      <div className="shadow-lg min-h-96 p-2 py-4 px-5 bg-white">
         {/* heading */}
         <div className="mb-2 py-2">
           <h1 className="font-semibold"> Projects</h1>

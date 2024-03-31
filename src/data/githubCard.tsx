@@ -33,7 +33,7 @@ export const TopLanguageCard: React.FC<TopLanguageProps> = ({
       options={{
         createElement(type, props, children) {
           return (
-            <div className="w-full shadow">
+            <div className="w-full shadow bg-white">
               {React.createElement(type, props, children)}
             </div>
           );
@@ -56,7 +56,7 @@ export const GithubRepoCard: React.FC<GithubRepoProps> = ({
       options={{
         createElement(type, props, children) {
           return (
-            <div className="w-full shadow">
+            <div className="w-full shadow bg-white">
               {React.createElement(type, { ...props }, children)}
             </div>
           );
