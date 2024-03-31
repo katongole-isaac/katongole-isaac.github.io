@@ -5,17 +5,14 @@ import PinniLogo from "../assets/images/pinnisoft_logo.jpg";
 import UpworkLogo from "../assets/images/upwork_logo.jpeg";
 
 import {
-  BashIcon,
   BootStrapIcon,
   ChakraIcon,
   CssIcon,
   GitIcon,
   HTMLIcon,
   JavascriptIcon,
-  LinuxIcon,
   NodejsIcon,
   ReactjsIcon,
-  ReduxIcon,
   TailwindIcon,
   TypescriptIcon,
 } from "../components/icons";

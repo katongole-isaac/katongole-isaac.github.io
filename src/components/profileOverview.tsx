@@ -8,12 +8,12 @@ import moment from "moment-timezone";
 
 import Avatar from "./common/avatar";
 import SkillIcon from "./skillIcon";
-import formatCurrency from "../utils/formatCurrency";
-import { RATE_PER_HOUR } from "../data/mydata";
+// import formatCurrency from "../utils/formatCurrency";
+// import { RATE_PER_HOUR } from "../data/mydata";
 import TextArt from "./common/textArt";
 
 export default function ProfileOverview() {
-  const currency = formatCurrency(RATE_PER_HOUR);
+  // const currency = formatCurrency(RATE_PER_HOUR);
 
   const getCurrentTimeInUganda = useCallback(
     () => moment().tz("Africa/Kampala").format("hh:mm A z Z "),
