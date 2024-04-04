@@ -5,10 +5,13 @@ import { IoSend } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { useState } from "react";
-import config from "../config/default.json";
+import sendEmail from "../utils/sendEmail";
+import verifyEmail from "../utils/verifyEmail";
+import toast from "react-hot-toast";
+import CustomToast, { CustomErrorToast } from "./common/customToast";
 
 const schema = z.object({
-  username: z.string().min(3, "Name should be at least 3 char(s)"),
+  name: z.string().min(3, "Name should be at least 3 char(s)"),
   email: z.string().email("Please provide a valid email"),
   message: z.string().min(5, "Too short message "),
 });
@@ -19,6 +22,7 @@ export default function FeedbackForm() {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
@@ -26,27 +30,35 @@ export default function FeedbackForm() {
 
   const onSubmit = (data: FieldValues) => {
     setIsLoading(true);
-    console.log("data: ", data);
 
-    const formData = new FormData();
+    verifyEmail(data?.email as string)
+      .then(async (response) => {
+        const result = await response.json();
 
-    Object.entries(data).forEach(([key, value]) => formData.append(key, value));
+        if (result?.data?.status === "invalid")
+          throw new Error("Unreachable Email address");
 
-    const options: RequestInit = {
-      body: formData,
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+        sendEmail(data)
+          .then(() => {
+            reset();
+            toast.custom(<CustomToast />, { id: "success_id" });
+          })
+          .catch(() => {
+            toast.custom(
+              <CustomErrorToast message="Something went wrong when sending email" />,
+              { id: "email_error_id" }
+            );
+          })
+          .finally(() => setIsLoading(false));
+      })
 
-    fetch(config.emailURL, options)
-      .then()
-      .catch()
+      .catch(() => {
+        toast.custom(
+          <CustomErrorToast message="Sorry, Your email seems to be unreachable" />,
+          { id: "email_verify_id" }
+        );
+      })
       .finally(() => setIsLoading(false));
-
-    setTimeout(() => setIsLoading(false), 6000);
   };
 
   return (
@@ -63,7 +75,7 @@ export default function FeedbackForm() {
       <form onSubmit={handleSubmit((data) => onSubmit(data))}>
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
-            <label htmlFor="username" className="text-slate-700">
+            <label htmlFor="name" className="text-slate-700">
               Name
             </label>
             <div className=" relative flex gap-2">
@@ -72,21 +84,21 @@ export default function FeedbackForm() {
               </div>
               <input
                 type="text"
-                id="username"
+                id="name"
                 placeholder="your name"
                 className={` flex-1 pl-10 text-slate-700 focus:outline border rounded outline-2 outline-offset-0 px-3 py-1 ${
-                  errors?.username?.message
+                  errors?.name?.message
                     ? "border-rose-400 outline-rose-200"
                     : "border-slate-300 outline-blue-200 "
                 }`}
                 autoComplete="off"
-                {...register("username")}
+                {...register("name")}
               />
             </div>
 
             {
               <p className="text-rose-700 text-sm">
-                {errors?.username?.message as string}
+                {errors?.name?.message as string}
               </p>
             }
           </div>
