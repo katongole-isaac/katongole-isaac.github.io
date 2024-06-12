@@ -1,10 +1,6 @@
 import {
   ChakraIcon,
-  GitIcon,
-  JavascriptIcon,
-  NodejsIcon,
   ReactjsIcon,
-  SassIcon,
   TailwindIcon,
   TypescriptIcon,
 } from "../components/icons";
@@ -89,64 +85,64 @@ export const projectData: ProjectData[] = [
     skills: [<ReactjsIcon />],
   },
 ];
-const _eliminatedProjects = [
-  {
-    projectName: "Covid19 Tracker",
-    projectAlt: "This project was based on the covid19 cases across the world.",
-    projectURL: " https://covidtrucker.netlify.app/",
-    projectImg: (
-      <ProjectImage
-        children="C"
-        paraProps={{ className: "font-bold   text-red-400 text-4xl" }}
-        divProps={{ className: "bg-red-100" }}
-      />
-    ),
-    skills: [<ReactjsIcon />, <JavascriptIcon />, <GitIcon />],
-  },
+// const _eliminatedProjects = [
+//   {
+//     projectName: "Covid19 Tracker",
+//     projectAlt: "This project was based on the covid19 cases across the world.",
+//     projectURL: " https://covidtrucker.netlify.app/",
+//     projectImg: (
+//       <ProjectImage
+//         children="C"
+//         paraProps={{ className: "font-bold   text-red-400 text-4xl" }}
+//         divProps={{ className: "bg-red-100" }}
+//       />
+//     ),
+//     skills: [<ReactjsIcon />, <JavascriptIcon />, <GitIcon />],
+//   },
 
-  {
-    projectName: "Manage Page",
-    projectAlt: "This project was a challenge hosted on frontend mentor. ",
-    projectURL: "https://katongole-isaac.github.io/manage-landing/",
-    projectImg: (
-      <ProjectImage
-        children="M"
-        paraProps={{ className: "font-bold   text-pink-400 text-4xl" }}
-        divProps={{ className: "bg-pink-100" }}
-      />
-    ),
-    skills: [<ReactjsIcon />, <JavascriptIcon />, <GitIcon />, <SassIcon />],
-  },
-  {
-    projectName: "Easy Bank Page",
-    projectURL: "https://katongole-isaac.github.io/easybank/",
-    projectAlt:
-      "Landing Page for easy Bank. A challenge hosted on fronten mentor",
-    projectImg: (
-      <ProjectImage
-        children="E"
-        paraProps={{ className: "font-bold   text-amber-500 text-4xl" }}
-        divProps={{ className: "bg-amber-100" }}
-      />
-    ),
-    skills: [
-      <ReactjsIcon />,
-      <TypescriptIcon />,
-      <GitIcon />,
-      <TailwindIcon />,
-    ],
-  },
-  {
-    projectName: "Bookmark Page",
-    projectURL: "https://katongole-isaac.github.io/bookmark/",
-    projectAlt: "Bookmark Landing page. A challenge hosted on fronten mentor",
-    projectImg: (
-      <ProjectImage
-        children="B"
-        paraProps={{ className: "font-bold   text-lime-400 text-4xl" }}
-        divProps={{ className: "bg-lime-100" }}
-      />
-    ),
-    skills: [<ReactjsIcon />, <TypescriptIcon />],
-  },
-];
+//   {
+//     projectName: "Manage Page",
+//     projectAlt: "This project was a challenge hosted on frontend mentor. ",
+//     projectURL: "https://katongole-isaac.github.io/manage-landing/",
+//     projectImg: (
+//       <ProjectImage
+//         children="M"
+//         paraProps={{ className: "font-bold   text-pink-400 text-4xl" }}
+//         divProps={{ className: "bg-pink-100" }}
+//       />
+//     ),
+//     skills: [<ReactjsIcon />, <JavascriptIcon />, <GitIcon />, <SassIcon />],
+//   },
+//   {
+//     projectName: "Easy Bank Page",
+//     projectURL: "https://katongole-isaac.github.io/easybank/",
+//     projectAlt:
+//       "Landing Page for easy Bank. A challenge hosted on fronten mentor",
+//     projectImg: (
+//       <ProjectImage
+//         children="E"
+//         paraProps={{ className: "font-bold   text-amber-500 text-4xl" }}
+//         divProps={{ className: "bg-amber-100" }}
+//       />
+//     ),
+//     skills: [
+//       <ReactjsIcon />,
+//       <TypescriptIcon />,
+//       <GitIcon />,
+//       <TailwindIcon />,
+//     ],
+//   },
+//   {
+//     projectName: "Bookmark Page",
+//     projectURL: "https://katongole-isaac.github.io/bookmark/",
+//     projectAlt: "Bookmark Landing page. A challenge hosted on fronten mentor",
+//     projectImg: (
+//       <ProjectImage
+//         children="B"
+//         paraProps={{ className: "font-bold   text-lime-400 text-4xl" }}
+//         divProps={{ className: "bg-lime-100" }}
+//       />
+//     ),
+//     skills: [<ReactjsIcon />, <TypescriptIcon />],
+//   },
+// ];
