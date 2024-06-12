@@ -5,15 +5,8 @@ import PinniLogo from "../assets/images/pinnisoft_logo.jpg";
 import UpworkLogo from "../assets/images/upwork_logo.jpeg";
 
 import {
-  BootStrapIcon,
-  ChakraIcon,
-  CssIcon,
-  GitIcon,
-  HTMLIcon,
-  JavascriptIcon,
   NodejsIcon,
   ReactjsIcon,
-  TailwindIcon,
   TypescriptIcon,
 } from "../components/icons";
 
@@ -35,9 +28,9 @@ const workExperienceData: IExperience[] = [
     },
     job: { title: "Web Frontend Developer - React", type: "On-site" },
     duration: {
-      endDate: "Present",
+      endDate: "May 2024",
       startDate: "Nov 2023",
-      totalTime: `${getMonths("2023111")} mons`,
+      totalTime: `${getMonths("2023111","20240601")} mons`,
     },
     description: [
       <p className="">- Developed and maintained web apps using React.js.</p>,
@@ -54,10 +47,7 @@ const workExperienceData: IExperience[] = [
 
     skills: [
       <NodejsIcon />,
-      <ReactjsIcon />,
       <TypescriptIcon />,
-      <ChakraIcon />,
-      <GitIcon />,
     ],
     companyIcon: <ImageIcon src={PinniLogo} alt="Mak_logo" />,
   },
@@ -88,9 +78,7 @@ const workExperienceData: IExperience[] = [
     skills: [
       <TypescriptIcon />,
       <ReactjsIcon />,
-      <NodejsIcon />,
-      <GitIcon />,
-      <TailwindIcon />,
+     
     ],
     companyIcon: <ImageIcon src={UpworkLogo} alt="Mak_logo" />,
   },
@@ -119,8 +107,6 @@ const workExperienceData: IExperience[] = [
       <ReactjsIcon />,
       <NodejsIcon />,
       <TypescriptIcon />,
-      <BootStrapIcon />,
-      <GitIcon />,
     ],
     companyIcon: (
       <FaBuildingColumns className="w-[56px] text-zinc-300 text-4xl" />
@@ -151,11 +137,7 @@ const workExperienceData: IExperience[] = [
     ],
 
     skills: [
-      <HTMLIcon />,
-      <CssIcon />,
       <ReactjsIcon />,
-      <JavascriptIcon />,
-      <GitIcon />,
       <NodejsIcon />,
     ],
     companyIcon: <ImageIcon src={MakLogo} alt="Mak_logo" />,

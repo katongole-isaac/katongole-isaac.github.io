@@ -58,7 +58,7 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-slate-100 " }}
       />
     ),
-    skills: [<ReactjsIcon />, <TypescriptIcon />, <GitIcon />, <ChakraIcon />],
+    skills: [<TypescriptIcon />, <ChakraIcon />],
   },
   {
     projectName: "Dispney Clone",
@@ -71,13 +71,7 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-indigo-100" }}
       />
     ),
-    skills: [
-      <GitIcon />,
-      <ReactjsIcon />,
-      <TypescriptIcon />,
-      <NodejsIcon />,
-      <TailwindIcon />,
-    ],
+    skills: [<TypescriptIcon />, <TailwindIcon />],
   },
 
   {
@@ -92,14 +86,10 @@ export const projectData: ProjectData[] = [
         divProps={{ className: "bg-purple-100" }}
       />
     ),
-    skills: [
-      <ReactjsIcon />,
-      <TypescriptIcon />,
-      <NodejsIcon />,
-      <GitIcon />,
-      <TailwindIcon />,
-    ],
+    skills: [<ReactjsIcon />],
   },
+];
+const _eliminatedProjects = [
   {
     projectName: "Covid19 Tracker",
     projectAlt: "This project was based on the covid19 cases across the world.",

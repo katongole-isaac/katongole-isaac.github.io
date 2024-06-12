@@ -37,7 +37,7 @@ function App() {
                 githubRepo={GITHUB_REPO}
               />
 
-              <Projects />
+              <Projects />  
             </div>
           </div>
         </div>

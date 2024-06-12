@@ -58,7 +58,7 @@ export default function Experience({
 
           {/* location */}
           <div>
-            <div className="text-xs text-gray-500 flex gap-1 items-center">
+            <div className="text-xs text-gray-500 flex gap-1 flex-wrap items-center">
               <span>{company.location}</span>
               <Dot />
               <span>{job.type}</span>
