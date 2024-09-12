@@ -6,15 +6,8 @@ export default function Footer() {
         <hr className="border-gray-200 " />
         <div className="px-2">
           <p className="text-slate-400 text-xs text-center">
-            This is an Open-source project. You can clone and use it freely. You
-            can find it{" "}
-            <a
-              href="https://github.com/katongole-isaac/katongole-isaac.github.io"
-              target="_blank"
-              className="text-blue-400"
-            >
-              here
-            </a>
+            &copy; Copyright | All rights reserved &trade;{" "}
+            {new Date().getFullYear()}
           </p>
         </div>
       </div>

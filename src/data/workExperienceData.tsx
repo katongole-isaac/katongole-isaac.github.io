@@ -1,7 +1,6 @@
 import ImageIcon from "../components/common/imageIcon";
 import { IExperience } from "../components/experience";
 import MakLogo from "../assets/images/makerere_logo.jpeg";
-import PinniLogo from "../assets/images/pinnisoft_logo.jpg";
 import UpworkLogo from "../assets/images/upwork_logo.jpeg";
 
 import {
@@ -20,37 +19,6 @@ const getMonths = (startDate: string, endDate?: string) => {
 };
 
 const workExperienceData: IExperience[] = [
-  {
-    company: {
-      duration: "Full time",
-      location: "Mawanda Rd, Kamwokya,Kampala, Central UG",
-      name: "PinniSoft",
-    },
-    job: { title: "Web Frontend Developer - React", type: "On-site" },
-    duration: {
-      endDate: "May 2024",
-      startDate: "Nov 2023",
-      totalTime: `${getMonths("2023111","20240601")} mons`,
-    },
-    description: [
-      <p className="">- Developed and maintained web apps using React.js.</p>,
-      <p>
-        - Collaborated with cross-functional teams including designers, product
-        managers, and developers to create high-quality products.
-      </p>,
-      <p>
-        - Participated in code reviews, weekly meetings and provided
-        constructive feedback.
-      </p>,
-      <p>- Integrated of third-party APIs as well as backend Restful APIs</p>,
-    ],
-
-    skills: [
-      <NodejsIcon />,
-      <TypescriptIcon />,
-    ],
-    companyIcon: <ImageIcon src={PinniLogo} alt="Mak_logo" />,
-  },
   {
     company: {
       duration: "Full time",
@@ -75,11 +43,7 @@ const workExperienceData: IExperience[] = [
       <p>- Used Clickup for team work and tracking task progress.</p>,
     ],
 
-    skills: [
-      <TypescriptIcon />,
-      <ReactjsIcon />,
-     
-    ],
+    skills: [<TypescriptIcon />, <ReactjsIcon />],
     companyIcon: <ImageIcon src={UpworkLogo} alt="Mak_logo" />,
   },
   {
@@ -103,11 +67,7 @@ const workExperienceData: IExperience[] = [
       <p>- Optimizing initial page loads and improving SEO.</p>,
     ],
 
-    skills: [
-      <ReactjsIcon />,
-      <NodejsIcon />,
-      <TypescriptIcon />,
-    ],
+    skills: [<ReactjsIcon />, <NodejsIcon />, <TypescriptIcon />],
     companyIcon: (
       <FaBuildingColumns className="w-[56px] text-zinc-300 text-4xl" />
     ),
@@ -136,10 +96,7 @@ const workExperienceData: IExperience[] = [
       </p>,
     ],
 
-    skills: [
-      <ReactjsIcon />,
-      <NodejsIcon />,
-    ],
+    skills: [<ReactjsIcon />, <NodejsIcon />],
     companyIcon: <ImageIcon src={MakLogo} alt="Mak_logo" />,
   },
 ];
