@@ -50,7 +50,7 @@ export default function ProfileOverview() {
               {/* <p className="font-bold">{currency}/year</p> */}
             </div>
 
-            <p>Frontend Developer - Reactjs | Nextjs | Typescript </p>
+            <p>Fullstack Developer - Reactjs | Nextjs | Nodejs | Typescript </p>
           </div>
 
           {/* Location */}
